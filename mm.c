@@ -8,13 +8,20 @@ int main()
 	scanf("%d",&n);
 
 	int arr[n];
-	int freq[1000];
+	int freq[1001];
 
-	while(n--)
+	for(i=0;i<1001;i++)
+	{
+		freq[i]=0;
+	}
+
+
+	for(i=0;i<n;i++)
 	{
 		scanf("%d",&arr[i]);
 		freq[arr[i]]++;
 	}
+
 
 	//printf("Q:");
 	scanf("%d",&q);
@@ -23,12 +30,17 @@ int main()
 	{
 		int num;
 		scanf("%d",&num);
-		if(freq[num]==0)
+
+		if(freq[num]!=0)
 		{
-			printf("NOT PRESENT\n");
+			printf("%d\n",freq[num]);
+			
 		}
 		else
-			printf("%d\n",freq[num]);
+		{
+			printf("NOT PRESENT\n");
+			
+		}	
 	}
 	return 0;
 }
