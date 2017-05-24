@@ -12,7 +12,7 @@ int main()
 
 	for(i=0;i<1001;i++)
 	{
-		freq[i]=0;
+		freq[i]=0; 
 	}
 
 
